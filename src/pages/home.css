@@ -1,0 +1,86 @@
+/* Light mode (mặc định) */
+.home-container {
+  
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 19.73rem;
+  background-color: #f3f4f6; 
+  color: #374151; 
+}
+
+.home-title {
+  z-index: 1;
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #f9fafd; 
+  margin-bottom: 1rem;
+}
+
+.home-subtitle {
+  z-index: 1;
+  font-size: 1.125rem;
+  color: #374151; 
+}
+
+.home-button {
+  z-index: 1;
+  margin-top: 1.5rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  background-color: #3b82f6; 
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.home-button:hover {
+  background-color: #2563eb; 
+}
+
+/* Dark mode */
+.dark .home-container {
+  background-color: #1f2937; 
+  color: #d1d5db; 
+}
+
+.dark .home-title {
+  z-index: 1;
+  color: #0c3e7c; 
+}
+
+.dark .home-subtitle {
+  z-index: 1;
+  color: #e5e7eb; 
+}
+
+.dark .home-button {
+    z-index: 1;
+    background-color: #2563eb; 
+    color: #f3f4f6; 
+}
+
+.dark .home-button:hover {
+    background-color: #3b82f6; 
+}
+
+.iconv{
+    z-index: 1;
+    margin-top: -300px;
+    margin-left:300px;
+
+}
+.theme{
+    position: absolute;
+    z-index: 0;
+    object-fit: cover;
+    height: 30vh;
+    width: 100%;
+    top: 0;
+
+}
+
