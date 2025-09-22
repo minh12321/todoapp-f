@@ -1,14 +1,12 @@
-/* Light mode (mặc định) */
 .home-container {
   
   height: 100vh;
-  width: 100%;
+  width: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0 19.73rem;
-  background-color: #f3f4f6; 
+  padding: 0 26.12rem;
   color: #374151; 
 }
 
@@ -44,7 +42,6 @@
 
 /* Dark mode */
 .dark .home-container {
-  background-color: #1f2937; 
   color: #d1d5db; 
 }
 
@@ -74,13 +71,13 @@
     margin-left:300px;
 
 }
-.theme{
+/* .theme{
     position: absolute;
     z-index: 0;
     object-fit: cover;
     height: 30vh;
     width: 100%;
     top: 0;
-
-}
+    margin-left: 0px;
+} */
 
