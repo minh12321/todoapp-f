@@ -22,13 +22,14 @@
 }
 
 .auth-card {
-  background: #fff;
+  background:  rgba(255, 255, 255, 0.8);
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
   width: 100%;
   max-width: 400px;
   text-align: center;
+  z-index: 3;
 }
 
 /* Title */
@@ -92,12 +93,11 @@
 
 /* Dark mode */
 .dark .page-2 {
-  background: linear-gradient(135deg, #000000 0%, #0f2027 100%);
   color: #d1d5db;
 }
 
 .dark .auth-card {
-  background: #0f172a; /* xanh đen */
+  background: rgba(15, 23, 42, 0.75);
   color: #fff;
 }
 

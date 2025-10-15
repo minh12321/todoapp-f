@@ -7,6 +7,8 @@ import Suntheme from "./assets/sun.jpg";
 import Home from "./pages/home";
 import Login from "./pages/auth/login";
 import Signup from "./pages/auth/sigin";
+import Dashboard from "./pages/dashboard/dashboard";
+import ProjectDetail from "./pages/projects/projectdetail";
 import "./App.css";
 
 
@@ -30,7 +32,7 @@ const pageVariants = {
 };
 
 const pageTransitionhome = { duration: 1, ease: "easeOut" };
-const pageTransition = { duration: 1, ease: "easeOut" };
+const pageTransition = { duration: 0.5, ease: "easeOut" };
 
 
 function AnimatedRoutes() {
@@ -79,6 +81,34 @@ function AnimatedRoutes() {
                 transition={pageTransition}
               >
                 <Signup />
+              </motion.div>
+            }
+          />
+          <Route
+            path="/dashboard"
+            element={
+              <motion.div
+                variants={pageVariants.signup}
+                initial="initial"
+                animate="animate"
+                exit="exit"
+                transition={pageTransition}
+              >
+                <Dashboard />
+              </motion.div>
+            }
+          />
+          <Route
+            path="/projectdetail"
+            element={
+              <motion.div
+                variants={pageVariants.signup}
+                initial="initial"
+                animate="animate"
+                exit="exit"
+                transition={pageTransition}
+              >
+                <ProjectDetail />
               </motion.div>
             }
           />

@@ -4,15 +4,19 @@ import api from "../../api/axios";
 import "./sigin.css";
 
 export default function Signup() {
-  const [form, setForm] = useState({ username: "", email: "", password: "" });
+  const [form, setForm] = useState({ name: "", email: "", password: "" });
+  const [message, setMessage] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       const res = await api.post("/auth/register", form);
+      setMessage(res || "Đăng ký thành công ");
       console.log(res.data);
     } catch (err) {
-      console.error(err.response?.data || err.message);
+      const errorMsg = err.response?.data?.error || "Có lỗi xảy ra";
+      setMessage(errorMsg);
+      console.error(errorMsg);
     }
   };
   return (
@@ -24,7 +28,7 @@ export default function Signup() {
             type="text"
             placeholder="Username"
             value={form.username}
-            onChange={(e) => setForm({ ...form, username: e.target.value })}
+            onChange={(e) => setForm({ ...form, name: e.target.value })}
           />
           <input
             type="email"
@@ -38,6 +42,7 @@ export default function Signup() {
             value={form.password}
             onChange={(e) => setForm({ ...form, password: e.target.value })}
           />
+          <p className="message">{message}</p>
           <button type="submit" className="auth-btn">Register</button>
         </form>
         <div className="auth-footer">
